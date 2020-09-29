@@ -1,15 +1,27 @@
 module.exports = function repeater(str, options) {
-  if (typeof(str) !== "string") {
+  if (str == null) {
+    str = "null";
+  } else if (str === undefined) {
+    str = "undefined";
+  } else if (str === NaN) {
+    str = "NaN";
+  } else if (typeof(str) !== "string") {
       str = str.toString();
   }
-  if (typeof(options.addition) !== "string") {
-      options.addition = options.addition.toString();
+  if (options.addition == null) {
+    options.addition = "null";
+  } else if (options.addition === undefined) {
+    options.addition = "undefined";
+  } else if (options.addition === NaN) {
+    options.addition = "NaN";
+  } else if (typeof(options.addition) !== "string") {
+    options.addition = options.addition.toString();
   }
   if (options.repeatTimes === "" || options.repeatTimes === undefined) {
-      options.repeatTimes = 0;
+      options.repeatTimes = 1;
   }
   if (options.additionRepeatTimes === "" || options.additionRepeatTimes === undefined) {
-      options.additionRepeatTimes = 0;
+      options.additionRepeatTimes = 1;
   }
   if (options.separator === undefined) {
       options.separator = "+";
