@@ -5,7 +5,7 @@ module.exports = class DepthCalculator {
       } else {    
           for (let element of array) {
               if (element instanceof Array) {
-                      calculateDepth(element, level + 1, arrmax);
+                      this.calculateDepth(element, level + 1, arrmax);
               } else {
                   arrmax.push(level + 1);
               }
