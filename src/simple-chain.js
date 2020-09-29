@@ -5,7 +5,7 @@ let chainMaker = {
       return this.chainArr.length;
   },
   addLink: function(value) {
-      this.chainArr.push("(" + value + ")");
+      this.chainArr.push("( " + value + " )");
       return this;
   },
   removeLink: function(position) {
