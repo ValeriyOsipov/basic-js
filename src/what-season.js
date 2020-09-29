@@ -6,6 +6,11 @@ module.exports = function getSeason(date){
   if (!(date instanceof Date)) {
       throw "Error";
   }
+  try {
+    date.valueOf();
+  } catch (err) {
+    throw "Error";
+  }
   switch(date.getMonth()) {
       case 11:
       case 0:
