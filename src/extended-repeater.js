@@ -1,17 +1,17 @@
 module.exports = function repeater(str, options) {
-  if (str == null) {
+  if (str === null) {
     str = "null";
   } else if (str === undefined) {
-    str = "undefined";
+    str = "";
   } else if (str === NaN) {
     str = "NaN";
   } else if (typeof(str) !== "string") {
       str = str.toString();
   }
-  if (options.addition == null) {
+  if (options.addition === null) {
     options.addition = "null";
   } else if (options.addition === undefined) {
-    options.addition = "undefined";
+    options.addition = "";
   } else if (options.addition === NaN) {
     options.addition = "NaN";
   } else if (typeof(options.addition) !== "string") {
